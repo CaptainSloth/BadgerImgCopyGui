@@ -1857,6 +1857,12 @@ $buttonEngageFoo_Click={
 #>	
 	
 	#Telling the chockbox thing what to do when checked...
+	if (!$checkboxJPG.checked, !$checkboxPNG.checked, !$checkboxGIF.checked, !$checkboxTIF.checked)
+	{
+		
+	}
+	else
+	{
 		if ($checkboxJPG.checked -eq $true)
 		{
 			$jpg = '*.jpg';
@@ -1874,6 +1880,7 @@ $buttonEngageFoo_Click={
 		{
 			$tif = '*.tif'
 		}
+	}
 	# End of CheckBox BS
 	
 	#Get all the img files in the folder
@@ -2144,7 +2151,7 @@ function Get-Image
 
 
 ]]></Code>
-  <Mode>0</Mode>
+  <Mode>1</Mode>
   <Assemblies>
     <Assembly>mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Assembly>
     <Assembly>System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Assembly>
